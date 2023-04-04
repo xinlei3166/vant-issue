@@ -1,0 +1,100 @@
+{
+  "name": "vite-vue-mobile-template",
+  "version": "1.0.0",
+  "description": "vite-vue-mobile-template",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "simple-git-hooks"
+  },
+  "keywords": [
+    "vue",
+    "vant",
+    "typescript",
+    "mobile",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.1.0",
+    "@vueuse/components": "^8.9.4",
+    "@vueuse/core": "^8.9.4",
+    "amfe-flexible": "^2.2.1",
+    "animate.css": "^4.1.1",
+    "await-to-js": "^3.0.0",
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.5",
+    "js-cookie": "^3.0.1",
+    "mitt": "^3.0.0",
+    "nanoid": "^4.0.0",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.17",
+    "pinia-plugin-persist": "^1.0.0",
+    "qs": "^6.11.0",
+    "vant": "^4.1.2",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.3"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.2",
+    "@types/mockjs": "^1.0.6",
+    "@types/node": "^14.18.23",
+    "@types/nprogress": "^0.2.0",
+    "@types/qs": "^6.9.7",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@vue/compiler-sfc": "^3.2.37",
+    "autoprefixer": "^10.4.13",
+    "consola": "^2.15.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-vue": "^7.20.0",
+    "less": "^4.1.3",
+    "less-loader": "^8.1.1",
+    "lint-staged": "^10.5.4",
+    "mockjs": "^1.1.0",
+    "npm-run-all": "^4.1.5",
+    "picocolors": "latest",
+    "postcss": "^8.4.21",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^2.7.1",
+    "simple-git-hooks": "latest",
+    "tsx": "latest",
+    "typescript": "^4.8.2",
+    "unplugin-auto-import": "^0.12.2",
+    "unplugin-vue-components": "^0.23.0",
+    "vconsole": "^3.15.0",
+    "vite": "^4.1.0",
+    "vite-plugin-html": "^2.1.2",
+    "vue-eslint-parser": "^7.11.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.4.21"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --concurrent false",
+    "commit-msg": "pnpm exec tsx scripts/verifyCommit.ts $1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "webpack",
+        "umi"
+      ]
+    },
+    "patchedDependencies": {
+      "postcss-px-to-viewport@1.1.1": "patches/postcss-px-to-viewport@1.1.1.patch"
+    }
+  }
+}

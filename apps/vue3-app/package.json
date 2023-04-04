@@ -1,0 +1,26 @@
+{
+  "name": "vue3-app",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "vue",
+    "vite",
+    "template"
+  ],
+  "author": "zhengxinlei",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "vite --host",
+    "build:dev": "vite build --mode development",
+    "build:qa": "vite build --mode qa",
+    "build": "vite build",
+    "serve": "vite preview --host"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
