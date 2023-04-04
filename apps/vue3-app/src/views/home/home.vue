@@ -7,10 +7,58 @@
   </van-swipe>
   <Menu />
   <van-tabs v-model:active="active" class="tabs">
-    <van-tab title="热门推荐">热门推荐</van-tab>
-    <van-tab title="时尚流行">时尚流行</van-tab>
-    <van-tab title="经典怀旧">经典怀旧</van-tab>
-    <van-tab title="其他类型">其他类型</van-tab>
+    <van-tab title="热门推荐">
+      <div style="margin-top: 20px">
+        <van-card
+          v-for="(item, index) in data"
+          :key="index"
+          num="2"
+          price="2.00"
+          desc="描述信息"
+          title="热门推荐"
+          thumb="https://fastly.jsdelivr.net/npm/@vant/assets/ipad.jpeg"
+        />
+      </div>
+    </van-tab>
+    <van-tab title="时尚流行">
+      <div style="margin-top: 20px">
+        <van-card
+          v-for="(item, index) in data"
+          :key="index"
+          num="2"
+          price="2.00"
+          desc="描述信息"
+          title="时尚流行"
+          thumb="https://fastly.jsdelivr.net/npm/@vant/assets/ipad.jpeg"
+        />
+      </div>
+    </van-tab>
+    <van-tab title="经典怀旧">
+      <div style="margin-top: 20px">
+        <van-card
+          v-for="(item, index) in data"
+          :key="index"
+          num="2"
+          price="2.00"
+          desc="描述信息"
+          title="经典怀旧"
+          thumb="https://fastly.jsdelivr.net/npm/@vant/assets/ipad.jpeg"
+        />
+      </div>
+    </van-tab>
+    <van-tab title="其他类型">
+      <div style="margin-top: 20px">
+        <van-card
+          v-for="(item, index) in data"
+          :key="index"
+          num="2"
+          price="2.00"
+          desc="描述信息"
+          title="其他类型"
+          thumb="https://fastly.jsdelivr.net/npm/@vant/assets/ipad.jpeg"
+        />
+      </div>
+    </van-tab>
   </van-tabs>
 </template>
 
@@ -19,6 +67,7 @@ import { ref } from 'vue'
 import Menu from './Menu.vue'
 
 const active = ref(0)
+const data = Array.from({ length: 10 })
 </script>
 
 <style lang="less" scoped>

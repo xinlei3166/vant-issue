@@ -1,7 +1,7 @@
 {
-  "name": "vite-vue-mobile-template",
+  "name": "vant-issue",
   "version": "1.0.0",
-  "description": "vite-vue-mobile-template",
+  "description": "vant-issue",
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -11,8 +11,7 @@
     "vue",
     "vant",
     "typescript",
-    "mobile",
-    "monorepo"
+    "mobile"
   ],
   "author": "",
   "license": "MIT",
